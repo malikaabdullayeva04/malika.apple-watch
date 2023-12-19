@@ -1,0 +1,284 @@
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* CUSTOM PROPS */
+:root {
+  --primary: #ea625c;
+  --text-color: #333;
+  --primary-dark: #c9514c;
+}
+
+/* GLOBAL */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+*,
+::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button {
+  display: inline-block;
+  min-width: 260px;
+  text-decoration: none;
+  background-color: var(--primary);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 12px 38px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-dark);
+}
+.button:active {
+  opacity: 0.6;
+}
+
+.lined-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: bold;
+  color: var(--primary);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.lined-link::before {
+  width: 40px;
+  height: 3px;
+  margin-right: 10px;
+  background-color: var(--primary);
+  content: "";
+  transition: width 0.3s ease;
+}
+.lined-link:hover::before {
+  width: 60px;
+}
+
+/* MAIN-CONTENT */
+.main-content {
+  flex-grow: 1;
+}
+
+/* SITE-HEADER */
+.sito-header {
+  padding-top: 30px;
+  padding-bottom: 30;
+}
+.site-header-container {
+  display: flex;
+  align-items: center;
+}
+
+.site-header-logo {
+  margin-right: auto;
+}
+.site-header-logo:hover {
+  opacity: 0.8;
+}
+.site-header-logo:active {
+  opacity: 0.8;
+}
+.site-header-logo-img {
+  display: block;
+  width: 35px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* SITENAV */
+.sitenav {
+  margin-right: 40px;
+}
+.sitenav-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sitenav-item:not(:last-child) {
+  margin-right: 30px;
+}
+.sitenav-link {
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 3;
+  text-decoration: none;
+  color: var(--text-color);
+}
+/* SEARCH-FORM */
+
+.search-form {
+  border: 0;
+}
+.search-form-input {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 0;
+  border-bottom: 1px solid #333;
+}
+
+/* HERO*/
+.hero {
+  padding-top: 140px;
+  padding-bottom: 185px;
+  border-bottom: 2px solid #ddd;
+  background-image: url("../img/apple-watch.png");
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 445px) bottom;
+  background-size: contain;
+}
+
+/* LEAD-STA */
+.lead-cta {
+  width: 100%;
+  max-width: 490px;
+}
+.lead-cta-heading {
+  margin-top: 0;
+
+  font-size: 50px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.lead-cta-whide .lead-cta-heading {
+  color: #fff;
+}
+
+.lead-cta-text {
+  padding-left: 37px;
+  border-left: 3px solid #888;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #777;
+}
+.lead-cta-whide .lead-cta-text {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* FEATURES */
+.feature {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.features-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.features-item {
+  width: 280px;
+}
+.features-item:not(:last-child) {
+  margin-right: 80px;
+}
+.features-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #222;
+  text-transform: uppercase;
+}
+.features-text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+.features-divider {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  margin: 0;
+  background-color: #ddd;
+  box-shadow: 16px 0 0 0 #ddd, 32px 0 0 0 #ddd;
+}
+
+/* PROMO */
+.promo {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.promo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo-img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* RUNNERS */
+
+.runners {
+  padding-top: 240px;
+  padding-bottom: 240px;
+  background-image: url("../img/control-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.runners-lead-cta {
+  margin-left: auto;
+}
+.lead-cta-whide {
+  color: #fff;
+}
